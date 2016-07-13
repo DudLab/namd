@@ -20,7 +20,7 @@ g = img(:,:,2); % Green channel
 b = img(:,:,3); % Blue channel
 a = zeros(size(img, 1), size(img, 2)); % Alpha layer
 % ==============================================================
-% ==========MAKE EACH CHANNEL uint8 INTO RBG uint8 3D===========
+% ==========MAKE EACH CHANNEL uint8 INTO RGB uint8 3D===========
 % ==============================================================
 red = cat(3, r, a, a);
 green = cat(3, a, g, a);
@@ -95,11 +95,11 @@ for k = 1:ch
     image(new);
     if imtype == 1
         imwrite(new,...
-            ['/Users/hwab/Dropbox (HHMI)/Phillipstuff/slices/filt' num2str(k) '.jpg']);
+            ['/Users/hwab/Dropbox (HHMI)/Phillipstuff/imagepr/bin/filter' num2str(k) '.jpg']);
     end
     if imtype == 2
         imwrite(new,...
-            ['/Users/hwab/Dropbox (HHMI)/Phillipstuff/slices/filt' num2str(k) '.tif'],...
+            ['/Users/hwab/Dropbox (HHMI)/Phillipstuff/imagepr/bin/filter' num2str(k) '.tif'],...
             'tif','WriteMode','overwrite','Compression','none', ...
             'ColorSpace', 'rgb');
     end
